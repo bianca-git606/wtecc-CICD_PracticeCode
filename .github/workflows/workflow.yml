@@ -1,12 +1,14 @@
-name: {
-  github-actions-lab
-}
-on: {
-  push: {
-    branches: ["main"]
-  }
+name: CI workflow
 
-  pull_request: {
+""" Triggers events """
+on:
+  push:
     branches: ["main"]
-  }
-}
+  pull_request:
+    branches: ["main"]
+
+""" Uses ubuntu-latest runner for the job """
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: python:3.9-slim
