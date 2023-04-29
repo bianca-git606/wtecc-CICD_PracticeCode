@@ -1,13 +1,11 @@
 name: CI workflow
 
-""" Triggers events """
 on:
   push:
     branches: ["main"]
   pull_request:
     branches: ["main"]
 
-""" Uses ubuntu-latest runner for the job """
 jobs:
   build:
     runs-on: ubuntu-latest
